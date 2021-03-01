@@ -1,3 +1,4 @@
+<?php
 
     /**
      * Print input in pre as code
@@ -6,7 +7,7 @@
      * @param bool $eol
      * @param string|bool $block
      */
-    public static function p($input, $block=false, $eol=false): void  {
+    function p($input, $block=false, $eol=false): void  {
         echo ($block) ? "<$block>" : null;
         echo ($eol) ? PHP_EOL : null;
         echo '<pre><code>';
@@ -25,7 +26,7 @@
      * PHP 7.0
      * @param string $string
      */
-    public static function c($string, $line=true): void  {
+    function c($string, $line=true): void  {
         if($line) $string = str_replace("\r\n", "", $string);
         echo "<script>console.log('$string')</script>";
     }

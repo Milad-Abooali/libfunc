@@ -12,9 +12,10 @@ trait output
    * PHP 7.0
    * @param string|array $input
    * @param bool $eol
+   * @param bool $dump
    * @param string|bool $block
    */
-  public static function p($input, $block=false, $eol=false): void  {
+  public static function p($input, $dump=true, $block=false, $eol=false): void  {
       echo ($block) ? "<$block>" : null;
       echo ($eol) ? PHP_EOL : null;
       echo '<pre><code>';
